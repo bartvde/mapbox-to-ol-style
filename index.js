@@ -610,7 +610,7 @@ export default function(olLayer, glStyle, source, resolutions, spriteData, sprit
             style.setGeometry(undefined);
           }
           if (!style.getText()) {
-            style.setText(text || new Text());
+            style.setText(text || new Text({overflow: true}));
           }
           text = style.getText();
           var textSize = paint['text-size'](zoom, properties);
